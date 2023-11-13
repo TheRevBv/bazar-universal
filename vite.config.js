@@ -480,6 +480,7 @@ export default defineConfig({
       "@pages": "/src/pages",
       "@routes": "/src/routes",
       "@styles": "/src/styles",
+      "@data": "/src/data",
     },
   },
 });
