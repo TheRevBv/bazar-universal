@@ -3,6 +3,8 @@
         "baseUrl": ".",
         "paths": {
             "@assets/*": ["public/assets/*"],
+            "@pages/*": ["src/pages/*"],
+            "@routes/*": ["src/routes/*"],
             "@components/*": ["src/components/*"],
             "@data/*": ["src/data/*"],
             "@hooks/*": ["src/hooks/*"],

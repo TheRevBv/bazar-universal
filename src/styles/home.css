@@ -1,0 +1,71 @@
+.home {
+  @apply bg-gray-100;
+}
+
+.productos-list {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.card {
+  @apply bg-white shadow-lg rounded-lg overflow-hidden my-4 mx-4 flex flex-col w-full;
+}
+
+.card:hover {
+  @apply transform scale-105 transition duration-300 ease-in-out;
+}
+
+.card img {
+  @apply h-56 w-full object-cover;
+}
+
+.card-body {
+  @apply flex-1 flex flex-col mx-4 my-4;
+}
+
+.card-title {
+  @apply text-2xl font-bold text-gray-700;
+}
+
+.card-actions {
+  @apply flex justify-between items-center px-6 py-3 bg-gray-100;
+}
+
+.card-actions .btn {
+  @apply px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700;
+}
+
+.card-actions .btn:hover {
+  @apply transform scale-105 transition duration-300 ease-in-out;
+}
+
+.search-container {
+  @apply flex justify-center items-center w-6/12 mx-auto my-8;
+}
+
+.search-input {
+  @apply border border-gray-400 rounded-l px-4 py-2 w-full;
+}
+
+.search-input:focus {
+  @apply outline-none border-cyan-900 border-2;
+}
+
+.search-input:hover {
+  @apply border-cyan-900 border-2;
+}
+
+.paginator {
+  @apply flex justify-center items-center my-8 gap-4;
+}
+
+.paginator .btn {
+  @apply px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700;
+}
+
+.paginator .btn:hover {
+  @apply transform scale-105 transition duration-300 ease-in-out;
+}
+
+.page {
+  @apply px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700;
+}
