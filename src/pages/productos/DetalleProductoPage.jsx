@@ -2,17 +2,7 @@
 import { useLoaderData } from "react-router-dom";
 import { FaStar, FaStarHalf } from "react-icons/fa";
 
-export const loader = async ({ params }) => {
-  const response = await fetch(
-    `${import.meta.env.VITE_API_URL}/productos/${params.id}`
-  );
-  if (!response.ok) {
-    throw new Error(`Error en la llamada a la API ${response.statusText}`);
-  }
-  const producto = await response.json();
-  console.log(producto);
-  return producto;
-};
+export const loader = async ({ params }) => {};
 
 const DetalleProductoPage = () => {
   const producto = useLoaderData();
