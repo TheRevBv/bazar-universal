@@ -6,10 +6,13 @@ import SearchInput from "@components/SearchInput";
 import Paginator from "@components/Paginator";
 
 const HomePage = () => {
-  // const headers = new Headers();
-  // headers.append("Content-Type", "application/json");
-  // headers.append("Accept", "application/json");
-  // headers.append("Access-Control-Allow-Origin", "http://localhost:3000");
+  const headers = new Headers();
+  headers.append("Content-Type", "application/json");
+  headers.append("Accept", "application/json");
+  headers.append(
+    "Access-Control-Allow-Origin",
+    `${import.meta.env.VITE_API_URL}`
+  );
   const [productos, setProductos] = useState([]);
   const [search, setSearch] = useState("");
   const [error, setError] = useState(false);
@@ -23,7 +26,11 @@ const HomePage = () => {
       const response = await fetch(
         `${
           import.meta.env.VITE_API_URL
-        }/productos/?page=${page}&title=${search}`
+        }/productos/?page=${page}&title=${search}`,
+        {
+          method: "GET",
+          headers,
+        }
       );
       if (!response.ok) {
         throw new Error(`Error en la llamada a la API ${response.statusText}`);
